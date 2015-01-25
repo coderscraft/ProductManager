@@ -1,6 +1,9 @@
 /**
  * Created by rarane on 1/25/2015.
  */
+
+var host_name = "http://app-40959649-cddd-452d-8710-fbd8e9681cc9.cleverapps.io";
+
 $(function() {
 
     $('#lbl_success' ).hide();
@@ -10,7 +13,7 @@ $(function() {
     $('#p_cost').attr("disabled", true);
     var availableTags = [];
     $.ajax({
-        url: "http://localhost:9000/productids",
+        url: host_name + "/productids",
         success: function( data ) {
             availableTags = data;
             $( "#main_id" ).autocomplete({
@@ -19,7 +22,7 @@ $(function() {
                         if(ui.item != null) {
                             //Getting product from db
                             $.ajax({
-                                url: "http://localhost:9000/product/" + ui.item.label,
+                                url: host_name + "/product/" + ui.item.label,
                                 success: function(data) {
                                     $("#p_id" ).val(data.id);
                                     $("#p_title" ).val(data.title);
@@ -58,7 +61,7 @@ $(function() {
             $.ajax({
                 contentType: 'application/json',
                 type: "POST",
-                url: "http://localhost:9000/updateproduct",
+                url: host_name + "/updateproduct",
                 data: prodData,
                 success: function( ) {
                     $('#lbl_success' ).show();
