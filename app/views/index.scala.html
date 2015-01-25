@@ -1,0 +1,59 @@
+@(tasks: String)
+
+@import helper._
+
+
+    @main(tasks) {
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-5 col-md-offset-4">
+                    <h1 xmlns="http://www.w3.org/1999/html">@tasks</h1>
+                    </div></div></div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 jumbotron">
+                <div class="col-md-5 col-md-offset-4">
+                    <div class="ui-widget">
+                        <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Product Id</span>
+                        <input id="main_id" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </br></br>
+            <div class="col-md-6 col-md-offset-3 jumbotron">
+                <div class="col-md-5 col-md-offset-4">
+                    <div class="ui-widget">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2">ID</span>
+                            <input id="p_id" class="form-control" aria-describedby="basic-addon2">
+                        </div></br></br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon3">Title</span>
+                            <input id="p_title" class="form-control" aria-describedby="basic-addon3">
+                        </div></br></br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon4">Price</span>
+                            <input id="p_price" class="form-control" aria-describedby="basic-addon4">
+                        </div></br></br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon5">Cost</span>
+                            <input id="p_cost" class="form-control" aria-describedby="basic-addon5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </br></br>
+            <div class="col-md-6 col-md-offset-3 jumbotron" id="lbl_success">
+                        <div class="col-md-5 col-md-offset-4">
+                            <span class="label label-success">Saved Successfully</span>
+                        </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3 jumbotron" id="lbl_invalid_title">
+                <div class="col-md-5 col-md-offset-4">
+                    <span class="label label-warning" id="invalid_data">Invalid Title</span>
+                </div>
+            </div>
+
+    }
