@@ -35,12 +35,7 @@ public class Application extends Controller {
 		return ok(toJson(Product.getProductIds()));
 	}
 
-	public static Result prod() {
 
-		List<Prod> prods = Prod.all();
-		return ok(toJson(prods));
-
-	}
 
 	public static Result updateProduct() {
 		JsonNode json = request().body().asJson();
