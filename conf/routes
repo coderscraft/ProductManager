@@ -8,6 +8,5 @@ GET         /assets/*file         controllers.Assets.at(path="/public", file)
 GET         /products             controllers.Application.products()
 GET         /product/:id          controllers.Application.getProduct(id: Integer)
 POST        /updateproduct        controllers.Application.updateProduct()
-GET         /prod                 controllers.Application.prod()
 GET         /productids           controllers.Application.getProductIds()
 
