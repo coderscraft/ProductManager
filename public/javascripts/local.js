@@ -107,4 +107,17 @@ $(function() {
         return !isNaN(parseFloat(n)) && isFinite(n);
     }
 
+
+    $("#main_id").keyup(function() {
+        if($("#main_id").val().length >= 4) {
+            var prodid = $("#main_id").val();
+            if(availableTags.indexOf(prodid) == -1) {
+                var msg = "Product " + prodid + " could not be found";
+                $('#invalid_data' ).text(msg);
+                $('#lbl_invalid_title' ).show();
+                setTimeout(function(){$('#lbl_invalid_title' ).hide()},2000)
+            }
+        }
+    });
+
 });
